@@ -1,16 +1,142 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import { Image } from 'astro:assets';
+
+import logoImg from '../img/logo.png';
+import sec1 from '../img/section1.jpg';
+import sec2 from '../img/section2.jpg';
+import sec3 from '../img/section3.jpg';
+import sec4 from '../img/section4.jpg';
+
+import iconmail from '../img/iconmail.png';
+import iconwhatsapp from '../img/iconwhatsapp.png';
+import iconig from '../img/iconig.png';
+import iconfb from '../img/iconfb.png';
 ---
 
 <Layout title="Welcome to Pratechno">
-	<main>
-		<h1 class="text-3xl font-bold underline">
-			Hello world!
-		  </h1>
+	<main class="">
+		<div class="overflow-hidden">
+			<div class="w-full h-[42rem] relative" id="home">
+                <Image alt="sec1" class="w-full h-[42rem] object-cover absolute" src={sec1} />
+				<div class="w-full h-[42rem] bg-black bg-opacity-50 absolute" />
+				<Image src={logoImg} alt="logo" class="absolute w-36 mr-4 sm:ml-10 ml-4 mt-4"/>
+				<div class="hidden md:flex flex-row justify-end space-x-8 relative mr-10">
+					<a href="#home" class="py-4 px-2 text-white font-semibold hover:text-fuchsia-400 transition duration-300">Home</a>
+					<a href="#about" class="py-4 px-2 text-white font-semibold hover:text-fuchsia-400 transition duration-300">About</a>
+					<a href="#service" class="py-4 px-2 text-white font-semibold hover:text-fuchsia-400 transition duration-300">Services</a>
+					<a href="#project" class="py-4 px-2 text-white font-semibold hover:text-fuchsia-400 transition duration-300">Projects</a>
+					<a href="#contact" class="py-4 px-2 text-white font-semibold hover:text-fuchsia-400 transition duration-300">Contact Us</a>
+				</div>
+                <a class="w-[90%] md:w-full flex justify-center mt-[15rem] absolute font-normal hover:font-semibold transition duration-500 text-white mx-6 text-4xl lg:text-6xl hover:scale-105">Help Your Business with Technology</a>
+				<a class="w-[90%] md:w-full flex justify-center mt-[25rem] absolute font-semibold text-fuchsia-400 hover:text-blue-400 transition duration-300 mx-6 text-4xl lg:text-6xl hover:scale-105">テクノロジーでビジネスを支援する</a>
+			</div>
+			<div class="w-full h-[60rem] relative" id="about">
+				<Image alt="sec2" class="w-full h-[42rem] object-cover absolute scale-75 mt-[3rem] rounded-3xl" src={sec2}/>
+				<div class="w-full h-[42rem] bg-black bg-opacity-30 absolute" />
+				<div class="w-full flex justify-center mt-[2rem] absolute text-blue-400 text-4xl lg:text-6xl hover:text-white transition duration-300">About について</div>
+				<div class="w-[80%] left-[5%] lg:left-[8%] text-center mt-[42rem] absolute text-white mx-6 text-sm lg:text-xl">We are passionate about helping businesses succeed in the digital age. We understand that in today's fast-paced and interconnected world, a strong online presence is crucial for reaching and engaging with your target audience. That's where we come in. </div>
+				<div class="w-[80%] left-[5%] lg:left-[8%] text-center mt-[50rem] lg:mt-[48rem] absolute text-blue-400 mx-6 text-sm lg:text-xl">私たちはデジタル時代における企業の成功を支援することに情熱を持っています。今日のペースが速く相互接続された世界では、ターゲット ユーザーにリーチしてエンゲージメントを得るには、強力なオンライン プレゼンスが不可欠であることを私たちは理解しています。そこで私たちの出番です。</div>
+			</div>
+			<div class="w-full h-[80rem] md:h-[42rem] relative" id="service">
+				<Image alt="sec3" class="w-full h-[80rem] md:h-[42rem] object-cover absolute" src={sec3} />
+				<div class="w-full h-[80rem] md:h-[42rem] bg-black bg-opacity-60 absolute" />
+				<div class="w-full flex justify-center pt-[2rem] relative text-fuchsia-400 text-4xl lg:text-6xl hover:text-white transition duration-300">Services サービス</div>
+				<div class="hidden md:flex justify-center relative">
+					<div class="w-[20rem] h-[28rem] mr-12 bg-black mt-[7rem] relative opacity-80 rounded-2xl shadow-[0_0_10px_5px] shadow-fuchsia-400">
+						<h1 class="flex justify-center mt-4 text-2xl text-fuchsia-400 font-semibold"> Social Media Management </h1>
+						<h1 class="flex justify-center mt-4 text-2xl text-fuchsia-400 font-semibold"> ソーシャルメディア管理 </h1>
+						<h1 class="w-[95%] pl-[5%] flex justify-center mt-[16rem] text-lg text-fuchsia-400 font-semibold text-center"> We provide services to handle your social media to promote your business to the next level </h1>
+					</div>
+					<div class="w-[20rem] h-[28rem] mr-12 bg-black mt-[7rem] relative opacity-80 rounded-2xl shadow-[0_0_10px_5px] shadow-blue-400">
+						<h1 class="flex justify-center mt-4 text-2xl text-blue-400 font-semibold"> Website Development </h1>
+						<h1 class="flex justify-center mt-4 text-2xl text-blue-400 font-semibold"> ウェブサイト開発 </h1>
+						<h1 class="w-[95%] pl-[5%] flex justify-center mt-[16rem] text-lg text-blue-400 font-semibold text-center"> Our team experienced in building landing page or any other website to adjust your business needs </h1>
+					</div>
+				</div>
+				<div class="md:hidden flex justify-center relative">
+					<div class="w-[20rem] h-[28rem] bg-black mt-[7rem] relative opacity-80 rounded-2xl shadow-[0_0_10px_5px] shadow-fuchsia-400">
+						<h1 class="flex justify-center mt-4 text-2xl text-fuchsia-400 font-semibold"> Social Media Management </h1>
+						<h1 class="flex justify-center mt-4 text-2xl text-fuchsia-400 font-semibold"> ソーシャルメディア管理 </h1>
+						<h1 class="w-[95%] pl-[5%] flex justify-center mt-[16rem] text-lg text-fuchsia-400 font-semibold text-center"> We provide services to handle your social media to promote your business to the next level </h1>
+					</div>
+				</div>
+				<div class="md:hidden flex justify-center relative">
+					<div class="w-[20rem] h-[28rem] bg-black mt-[7rem] relative opacity-80 rounded-2xl shadow-[0_0_10px_5px] shadow-blue-400">
+						<h1 class="flex justify-center mt-4 text-2xl text-blue-400 font-semibold"> Website Development </h1>
+						<h1 class="flex justify-center mt-4 text-2xl text-blue-400 font-semibold"> ウェブサイト開発 </h1>
+						<h1 class="w-[95%] pl-[5%] flex justify-center mt-[16rem] text-lg text-blue-400 font-semibold text-center"> Our team experienced in building landing page or any other website to adjust your business needs </h1>
+					</div>
+				</div>
+			</div>
+			<div class="w-full h-[42rem] relative" id="project">
+				<div class="w-full flex justify-center mt-[2rem] absolute text-blue-400 text-4xl lg:text-6xl hover:text-white transition duration-300">Projects プロジェクト</div>
+			</div>
+			<div class="w-full h-[70rem] md:h-[42rem] relative" id="contact">
+				<Image alt="sec4" class="w-full h-[80rem] md:h-[42rem] object-cover absolute brightness-[30%]" src={sec4} />
+				<div class="w-full flex justify-center mt-[2rem] relative pt-[2rem] text-fuchsia-400 text-3xl md:text-4xl lg:text-6xl mx-4 hover:text-white transition duration-300">Contact Us お問い合わせ</div>
+				<div class="hidden md:flex justify-center relative">
+					<div class="w-[43rem] h-[6rem] mr-6 bg-black mt-[10rem] relative opacity-80 rounded-2xl shadow-[0_0_10px_5px] shadow-blue-400 ml-4">
+						<div class="flex justify-normal">
+							<Image alt="mail" src={iconmail} class="w-24 scale-75"/>
+							<h1 class="w-24 text-white text-2xl pt-7 lg:text-4xl lg:pt-6"> pratechnomail@gmail.com </h1>
+						</div>
+					</div>
+					<div class="w-[43rem] h-[6rem] ml-6 bg-black mt-[10rem] relative opacity-80 rounded-2xl shadow-[0_0_10px_5px] shadow-fuchsia-400 mr-4">
+						<div class="flex justify-normal">
+							<Image alt="wa" src={iconwhatsapp} class="w-24 scale-75"/>
+							<h1 class="w-24 text-white text-2xl pt-7 lg:text-4xl lg:pt-6">+60124866448</h1>
+						</div>
+					</div>
+				</div>
+				<div class="hidden md:flex justify-center relative">
+					<div class="w-[43rem] h-[6rem] mr-6 bg-black mt-[10rem] relative opacity-80 rounded-2xl shadow-[0_0_10px_5px] shadow-fuchsia-400 ml-4">
+						<div class="flex justify-normal">
+							<Image alt="mail" src={iconig} class="w-24 scale-75"/>
+							<h1 class="w-24 text-white text-2xl pt-7 lg:text-4xl lg:pt-6">pratechno.ca</h1>
+						</div>
+					</div>
+					<div class="w-[43rem] h-[6rem] ml-6 bg-black mt-[10rem] relative opacity-80 rounded-2xl shadow-[0_0_10px_5px] shadow-blue-400 mr-4">
+						<div class="flex justify-normal">
+							<Image alt="wa" src={iconfb} class="w-24 scale-75"/>
+							<h1 class="w-24 text-white text-2xl pt-7 lg:text-4xl lg:pt-6">pratechno</h1>
+						</div>
+					</div>
+				</div>
+				<div class="md:hidden flex justify-center relative">
+					<div class="w-[43rem] h-[6rem] mx-4 bg-black mt-[4rem] relative opacity-80 rounded-2xl shadow-[0_0_10px_5px] shadow-blue-400 ml-4">
+						<div class="flex justify-normal">
+							<Image alt="mail" src={iconmail} class="w-24 scale-75"/>
+							<h1 class="w-24 text-white text-2xl pt-7 lg:text-4xl lg:pt-6"> pratechnomail@gmail.com </h1>
+						</div>
+					</div>
+				</div>
+				<div class="md:hidden flex justify-center relative">
+					<div class="w-[43rem] h-[6rem] mx-4 bg-black mt-[4rem] relative opacity-80 rounded-2xl shadow-[0_0_10px_5px] shadow-fuchsia-400 mr-4">
+						<div class="flex justify-normal">
+							<Image alt="wa" src={iconwhatsapp} class="w-24 scale-75"/>
+							<h1 class="w-24 text-white text-2xl pt-7 lg:text-4xl lg:pt-6">+60124866448</h1>
+						</div>
+					</div>
+				</div>
+				<div class="md:hidden flex justify-center relative">
+					<div class="w-[43rem] h-[6rem] mx-4 bg-black mt-[4rem] relative opacity-80 rounded-2xl shadow-[0_0_10px_5px] shadow-blue-400 mr-4">
+						<div class="flex justify-normal">
+							<Image alt="wa" src={iconfb} class="w-24 scale-75"/>
+							<h1 class="w-24 text-white text-2xl pt-7 lg:text-4xl lg:pt-6">pratechno</h1>
+						</div>
+					</div>
+				</div>
+				<div class="md:hidden flex justify-center relative">
+					<div class="w-[43rem] h-[6rem] mx-4 bg-black mt-[4rem] relative opacity-80 rounded-2xl shadow-[0_0_10px_5px] shadow-fuchsia-400 ml-4">
+						<div class="flex justify-normal">
+							<Image alt="mail" src={iconig} class="w-24 scale-75"/>
+							<h1 class="w-24 text-white text-2xl pt-7 lg:text-4xl lg:pt-6">pratechno.ca</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</main>
 </Layout>
-
-<style>
-	
-</style>

@@ -4,6 +4,8 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+import '@fontsource/monda';
 ---
 
 <!doctype html>
@@ -21,5 +23,12 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
-	
+	body {
+		background-color: black;
+	}
+
+	* {
+		font-family: "Monda", cursive;
+		scroll-behavior: smooth;
+	}
 </style>
